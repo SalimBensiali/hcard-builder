@@ -155,9 +155,6 @@
   box-shadow: 0 1px 1px rgba(154, 154, 154, .75);
 }
 
-.hcard-preview-email {
-}
-
 .hcard-preview-address-l2 {
   padding-left: 4.8em;/*6*.8em*/
 }
@@ -171,4 +168,21 @@
 .wrapper-input label,
 .hcard-preview-field span {
   font-family: sans-serif;
+}
+
+/* responsiveness */
+@media (max-width: 425px) {
+  .hcard-builder, .hcard-preview {
+    width: 100%;
+  }
+
+  .btn-upload-avatar, .btn-create-hcard {
+    width: 97%;
+    margin-bottom: 3%;
+  }
+
+  .hcard-preview {
+    margin-top: 0;
+  }
+
 }

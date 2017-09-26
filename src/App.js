@@ -74,7 +74,6 @@ class App extends Component {
 
   handleChange = (fieldName, e) => {
     this.setState({[fieldName]: e.target.value});
-    console.log(fieldName, e.target.value);
   }
 
   handleUploadAvatar = (e)  => {

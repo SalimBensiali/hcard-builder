@@ -182,7 +182,7 @@
 
 /* responsiveness */
 @media (max-width: 425px) {
-  .hcard-builder, .hcard-preview {
+  .hcard-builder, .hcard-preview, .wrapper-input {
     width: 100%;
   }
 

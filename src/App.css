@@ -1,24 +1,174 @@
 .App {
-  text-align: center;
+  background: #e3e3e3;
+  color: #2c3e50;
+  font-family: serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.App-title, .field-group-title {
+  margin: 0 1.5% 1em;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
+.field-group {
+  margin-bottom: 20px;
+}
+
+.field-group-title {
+  color: #b0b8bc;
+  border-bottom: 1px solid #dbe0e2;
+  text-transform: uppercase;
+  font-size: .8em;
+  margin-bottom: 20px
+}
+
+.hcard-builder, .hcard-preview {
+  display: inline-block;
+  width: 50%;
   padding: 20px;
+  box-sizing: border-box;
+  vertical-align: top;
+}
+
+.hcard-preview {
+  margin-top: 50px;
+}
+
+.hcard-builder {
+  background: white;
+  padding: 10px;
+}
+
+.wrapper-input, .hcard-builder-controls {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 1.5%;
+  margin-bottom: 1em;
+}
+
+.wrapper-input {
+  width: 50%;
+  /*background: red;*/
+}
+
+.hcard-builder-controls {
+  width: 100%;
+  padding: 0;
+}
+
+.wrapper-input input {
+  color: black;
+  width: 100%;
+  margin: 0;
+  padding: .5em;
+  border: 1px solid #c3c4c3;
+  border-radius: 3px;
+  box-shadow: 0 0 1px rgba(154, 154, 154, .25) inset;
+  box-sizing: border-box;
+  font-family: serif;
+  font-size: 1em;
+}
+
+.wrapper-input label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 1em;
+  margin-bottom: 2px;
+}
+
+.btn-create-hcard, .btn-upload-avatar {
+  border: none;
+  border-radius: 3px;
   color: white;
+  line-height: 2.4em;
+  vertical-align: middle;
+  padding: 0 1.5em;
+  width: 47%;
+  margin: 0 1.5%;
+  box-sizing: border-box;font-size: 1.2em;
 }
 
-.App-intro {
-  font-size: large;
+.btn-create-hcard {
+  background: #3498db;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.btn-upload-avatar {
+  background: #627b8b;
+}
+
+.hcard-preview-title {
+  text-align: right;
+}
+
+.hcard-preview-header {
+  position: relative;
+  background: #2c3e50;
+}
+
+.hcard-preview-body {
+  background: white;
+  box-shadow: 0 2px #9a9a9a;
+  padding: 10px 20px 30px;
+}
+
+.hcard-preview-field {
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box; 
+  padding-top: 15px;
+  border-bottom: 1px solid #b0b8bc;
+  width: 100%;
+  color: black;
+}
+
+.hcard-preview-field span {
+  color: #2c3e50;
+  display: inline-block;
+  width: 6em;
+  text-transform: uppercase;
+  font-size: .8em;
+}
+
+.hcard-preview-name {
+  display: block;
+
+  width: 80%;
+  min-height: 4em;
+  line-height: 1;
+  padding: 2em 20px 1em;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5em;
+  font-family: serif;
+}
+
+.hcard-preview-avatar {
+  position: absolute;
+  display: block;
+  width: 20%;
+  height: 4em;
+  position: absolute;
+  bottom: -10px;
+  right: 10px;
+  padding: 5px;
+  background: white;
+  box-sizing: border-box;
+  box-shadow: 0 1px 1px rgba(154, 154, 154, .75);
+}
+
+.hcard-preview-email {
+}
+
+.hcard-preview-address-l2 {
+  padding-left: 4.8em;/*6*.8em*/
+}
+
+.hcard-preview-postcode, .hcard-preview-country {
+  width: 50%;
+}
+
+.App-title,
+.field-group-title,
+.wrapper-input label,
+.hcard-preview-field span {
+  font-family: sans-serif;
 }

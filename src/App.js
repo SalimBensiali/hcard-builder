@@ -86,7 +86,8 @@ class App extends Component {
             <FieldGroup key={index} {...props} changeHandler={this.handleChange} />
             ))}
           <div className="hcard-builder-controls">
-            <button className="btn-upload-avatar">Upload Avatar</button>
+            <input id="file" type="file" className="btn-input" />
+            <label htmlFor="file" className="btn-upload-avatar">Upload Avatar</label>
             <button className="btn-create-hcard">Create hCard</button>
           </div>
         </div>

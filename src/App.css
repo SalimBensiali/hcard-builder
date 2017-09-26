@@ -74,16 +74,23 @@
   margin-bottom: 2px;
 }
 
+.btn-input {
+  position: absolute;
+  opacity: 0;
+}
+
 .btn-create-hcard, .btn-upload-avatar {
   border: none;
   border-radius: 3px;
   color: white;
-  line-height: 2.4em;
-  vertical-align: middle;
-  padding: 0 1.5em;
+  padding: .8em 1.5em;
   width: 47%;
   margin: 0 1.5%;
-  box-sizing: border-box;font-size: 1.2em;
+  box-sizing: border-box;
+  font-size: 1.2em;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
 }
 
 .btn-create-hcard {
@@ -113,7 +120,8 @@
   width: 100%;
   display: inline-block;
   box-sizing: border-box; 
-  padding-top: 15px;
+  padding-top: .65em;
+  height: 1.9em;
   border-bottom: 1px solid #b0b8bc;
   width: 100%;
   color: black;
@@ -166,7 +174,9 @@
 .App-title,
 .field-group-title,
 .wrapper-input label,
-.hcard-preview-field span {
+.hcard-preview-field span,
+.btn-upload-avatar,
+.btn-create-hcard {
   font-family: sans-serif;
 }
 

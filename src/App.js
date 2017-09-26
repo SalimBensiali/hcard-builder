@@ -17,14 +17,14 @@ const FieldGroup = ({ title, fields, changeHandler }) => (
     </div>
 );
 
-const HcardPreview = ({ title="", givenName="", surname="", email="", phone="", houseNameOrNumber="", street="", suburb="", state="", postcode="", country="" }) => (
+const HcardPreview = ({ title="", givenName="", surname="", email="", phone="", houseNameOrNumber="", street="", suburb="", state="", postcode="", country="", avatarSrc }) => (
   <div className="hcard-preview">
     <h2 className="hcard-preview-title">{title}</h2>
     <div className="hcard-preview-header">
       <div className="hcard-preview-field hcard-preview-name">
         {givenName} {surname}
       </div>
-      <img className="hcard-preview-avatar" alt="Avatar" />
+      <img className="hcard-preview-avatar" alt="Avatar" src={avatarSrc}/>
     </div>
     <div className="hcard-preview-body">
       <div className="hcard-preview-field hcard-preview-email">
@@ -77,6 +77,17 @@ class App extends Component {
     console.log(fieldName, e.target.value);
   }
 
+  handleUploadAvatar = (e)  => {
+    const file = e.target.files[0];
+
+    // Only process image files.
+    if (!file || !file.type.match('image.*')) {
+        return;
+    }
+
+    this.setState({ avatarSrc: URL.createObjectURL(file) });
+  }
+
   render() {
     return (
       <div className="App">
@@ -86,7 +97,7 @@ class App extends Component {
             <FieldGroup key={index} {...props} changeHandler={this.handleChange} />
             ))}
           <div className="hcard-builder-controls">
-            <input id="file" type="file" className="btn-input" />
+            <input id="file" type="file" className="btn-input" onChange={this.handleUploadAvatar}/>
             <label htmlFor="file" className="btn-upload-avatar">Upload Avatar</label>
             <button className="btn-create-hcard">Create hCard</button>
           </div>

@@ -2,18 +2,18 @@ import React, { Component } from 'react';
 import './App.css';
 import defaultAvatar from './avatar-default.png';
 
-const InputField = ({ title, type="text", onChange }) => (
-  <div className={`wrapper-input wrapper-input-$name.replace(" ", "-")`}>
+const InputField = ({ name, title, type="text", onChange }) => (
+  <div className={`wrapper-input wrapper-input-${name}`}>
     <label>{title}</label>
     <input type={type} onChange={onChange} />
   </div>
 );
 
 const FieldGroup = ({ title, fields, changeHandler }) => (
-  <div className={`field-group ${title}.replace(" ", "-")`}>
+  <div className={`field-group ${title.split(" ").join("-")}`}>
       <h3 className="field-group-title">{title}</h3>
       {fields.map(({ name, title, type="text" }) => (
-        <InputField key={name} title={title || name} type={type} onChange={changeHandler.bind(this, name)} />
+        <InputField key={name} name={name} title={title || name} type={type} onChange={changeHandler.bind(this, name)} />
       ))}
     </div>
 );
@@ -37,7 +37,7 @@ const HcardPreview = ({ title="", givenName="", surname="", email="", phone="", 
       <div className="hcard-preview-field hcard-preview-address">
         <span>address</span>{houseNameOrNumber} {street}
       </div>
-      <div className="hcard-preview-field hcard-preview-address-l2">
+      <div className="hcard-preview-field">
         {suburb.length>0 && `${suburb}${ (state.length>0)? (', ' + state): ''}`}
       </div>
       <div className="hcard-preview-field hcard-preview-postcode">
@@ -56,7 +56,7 @@ class App extends Component {
   fieldGroups = [{
     title: "Personal details",
     fields: [
-      { name: "givenName", title: "Given name" },
+      { name: "givenName", title: "given name" },
       { name: "surname" },
       { name: "email" , type: "email" },
       { name: "phone" },
@@ -64,7 +64,7 @@ class App extends Component {
   }, {
     title: "Address",
     fields: [
-      { name: "houseNameOrNumber", title: "House name or #" },
+      { name: "houseNameOrNumber", title: "house name or #" },
       { name: "street" },
       { name: "suburb" },
       { name: "state" },

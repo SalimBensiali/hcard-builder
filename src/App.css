@@ -16,6 +16,7 @@
   color: #b0b8bc;
   border-bottom: 1px solid #dbe0e2;
   text-transform: uppercase;
+  font-weight: normal;
   font-size: .8em;
   margin-bottom: 20px
 }
@@ -64,7 +65,7 @@
   box-shadow: 0 0 1px rgba(154, 154, 154, .25) inset;
   box-sizing: border-box;
   font-family: serif;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 .wrapper-input label {
@@ -105,6 +106,10 @@
 
 .hcard-preview-title {
   text-align: right;
+  text-transform: uppercase;
+  color: #95a5a6;
+  font-size: 1em;
+  font-weight: normal;
 }
 
 .hcard-preview-header {
@@ -121,27 +126,29 @@
 .hcard-preview-field {
   width: 100%;
   display: inline-block;
-  vertical-align: top;
   box-sizing: border-box; 
   padding-top: .65em;
+  padding-left: 4.5em;
   min-height: 1.9em;
   border-bottom: 1px solid #b0b8bc;
   width: 100%;
   color: black;
+  font-size: 1.2em;
+  vertical-align: bottom;
 }
 
 .hcard-preview-field span {
   color: #2c3e50;
-  display: inline-block;
-  width: 6em;
+  display: block;
+  margin-top : .5em;
+  float: left;
   text-transform: uppercase;
-  font-size: .8em;
+  font-size: .64em;
+  margin-left: -7.04em;/* =4.5em/.64 to counter padding-left: 6em; of parnet node .hcard-preview-field */
 }
 
 .hcard-preview-name {
   display: block;
-
-  width: 80%;
   min-height: 4em;
   line-height: 1;
   padding: 2em 20px 1em;
@@ -171,28 +178,44 @@
   width: 50%;
 }
 
+.hcard-preview-country {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 .App-title,
 .field-group-title,
 .wrapper-input label,
 .hcard-preview-field span,
 .btn-upload-avatar,
-.btn-create-hcard {
+.btn-create-hcard,
+.hcard-preview-title {
   font-family: sans-serif;
 }
 
 /* responsiveness */
-@media (max-width: 630px) {
-  .hcard-builder, .hcard-preview, .wrapper-input {
+
+@media (max-width: 640px) {
+  .hcard-builder, .hcard-preview {
     width: 100%;
   }
 
-  .btn-upload-avatar, .btn-create-hcard {
-    width: 97%;
-    margin-bottom: 3%;
+  .hcard-preview-postcode, .hcard-preview-country {
+    width: 50%;
   }
 
   .hcard-preview {
     margin-top: 0;
   }
+}
 
+@media (max-width: 430px) {
+  .btn-upload-avatar, .btn-create-hcard {
+    width: 97%;
+    margin-bottom: 3%;
+  }
+
+  .hcard-preview-postcode, .hcard-preview-country, .wrapper-input {
+    width: 100%;
+  }
 }

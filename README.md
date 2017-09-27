@@ -4,7 +4,7 @@ Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
 ## Table of Contents
-
+- [Setting up](#setting-up)
 - [Updating to New Releases](#updating-to-new-releases)
 - [Sending Feedback](#sending-feedback)
 - [Folder Structure](#folder-structure)
@@ -94,6 +94,15 @@ You can find the most recent version of this guide [here](https://github.com/fac
   - [`npm run build` fails to minify](#npm-run-build-fails-to-minify)
   - [Moment.js locales are missing](#momentjs-locales-are-missing)
 - [Something Missing?](#something-missing)
+
+## Setting up
+
+This project requires node v6. Once this repository cloned, cd into the project directory, and run:
+
+###`npm install`
+
+Installs all the dependencies and development dependencies this project needs.<br>
+See the section about [available scripts](#available-scripts) for information about running the app locally.
 
 ## Updating to New Releases
 

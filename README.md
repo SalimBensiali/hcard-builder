@@ -99,7 +99,7 @@ You can find the most recent version of this guide [here](https://github.com/fac
 
 This project requires node v6. Once this repository cloned, cd into the project directory, and run:
 
-###`npm install`
+### `npm install`
 
 Installs all the dependencies and development dependencies this project needs.<br>
 See the section about [available scripts](#available-scripts) for information about running the app locally.

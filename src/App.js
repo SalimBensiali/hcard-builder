@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import defaultAvatar from './avatar-default.png';
 
 const InputField = ({ title, type="text", onChange }) => (
   <div className={`wrapper-input wrapper-input-$name.replace(" ", "-")`}>
@@ -21,10 +22,10 @@ const HcardPreview = ({ title="", givenName="", surname="", email="", phone="", 
   <div className="hcard-preview">
     <h2 className="hcard-preview-title">{title}</h2>
     <div className="hcard-preview-header">
+      <img className="hcard-preview-avatar" alt="Avatar" src={avatarSrc}/>
       <div className="hcard-preview-field hcard-preview-name">
         {givenName} {surname}
       </div>
-      <img className="hcard-preview-avatar" alt="Avatar" src={avatarSrc}/>
     </div>
     <div className="hcard-preview-body">
       <div className="hcard-preview-field hcard-preview-email">
@@ -50,7 +51,7 @@ const HcardPreview = ({ title="", givenName="", surname="", email="", phone="", 
 );
 
 class App extends Component {
-  state = {};
+  state = { avatarSrc: defaultAvatar };
 
   fieldGroups = [{
     title: "Personal details",

@@ -83,7 +83,7 @@
   border: none;
   border-radius: 3px;
   color: white;
-  padding: .8em 1.5em;
+  padding: .8em 10px;
   width: 47%;
   margin: 0 1.5%;
   box-sizing: border-box;
@@ -95,10 +95,12 @@
 
 .btn-create-hcard {
   background: #3498db;
+  box-shadow: 0 2px #2980b9;
 }
 
 .btn-upload-avatar {
   background: #627b8b;
+  box-shadow: 0 2px #3f515d;
 }
 
 .hcard-preview-title {
@@ -119,9 +121,10 @@
 .hcard-preview-field {
   width: 100%;
   display: inline-block;
+  vertical-align: top;
   box-sizing: border-box; 
   padding-top: .65em;
-  height: 1.9em;
+  min-height: 1.9em;
   border-bottom: 1px solid #b0b8bc;
   width: 100%;
   color: black;
@@ -150,13 +153,10 @@
 }
 
 .hcard-preview-avatar {
-  position: absolute;
+  float: right;
   display: block;
-  min-width: 5em;
   height: 6em;
-  position: absolute;
-  bottom: -10px;
-  right: 10px;
+  margin: 10px;
   padding: 5px;
   background: white;
   box-sizing: border-box;
@@ -181,7 +181,7 @@
 }
 
 /* responsiveness */
-@media (max-width: 425px) {
+@media (max-width: 630px) {
   .hcard-builder, .hcard-preview, .wrapper-input {
     width: 100%;
   }
